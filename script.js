@@ -14,7 +14,10 @@ for (let i = 0; i < 225; i++) {
   else if (row > 8 && col > 8) block.classList.add('green-zone');
 
   // ✅ Single beautiful center diamond block
-  else if (i === 112) block.classList.add('center-home');
+  else if (i === 112) {
+  block.classList.add('center-home');
+  block.innerText = "HOME";
+}
 
   grid.appendChild(block);
 }
