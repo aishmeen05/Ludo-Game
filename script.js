@@ -1,5 +1,4 @@
 const grid = document.querySelector('.grid-container');
-
 for (let i = 0; i < 225; i++) {
   const block = document.createElement('div');
   block.className = 'block';
@@ -13,12 +12,15 @@ for (let i = 0; i < 225; i++) {
   else if (row > 8 && col < 6) block.classList.add('blue-zone');
   else if (row > 8 && col > 8) block.classList.add('green-zone');
 
-  // ✅ Single beautiful center diamond block
-  else if (i === 112) {
-  block.classList.add('center-home');
-  block.innerText = "HOME";
-}
+  // ✅ 3x3 center HOME blocks
+  else if (row >= 6 && row <= 8 && col >= 6 && col <= 8) {
+    block.classList.add('center-home');
+
+    // Show HOME text only on center block (middle of the 3x3 grid)
+    if (row === 7 && col === 7) {
+      block.innerText = "HOME";
+    }
+  }
 
   grid.appendChild(block);
 }
-
