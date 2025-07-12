@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f4f4f4;
+  background-color: #f0f0f0;
 }
 
 h1 {
@@ -20,13 +20,40 @@ h1 {
   grid-template-columns: repeat(15, 30px);
   grid-template-rows: repeat(15, 30px);
   gap: 1px;
-  background-color: black;
+  background-color: #333;
 }
 
 .block {
   width: 30px;
   height: 30px;
   background-color: white;
-  box-sizing: border-box;
   border: 1px solid #ccc;
+}
+
+/* Color zones */
+.red-zone {
+  background-color: #ff4d4d;
+}
+
+.green-zone {
+  background-color: #4dff88;
+}
+
+.blue-zone {
+  background-color: #4da6ff;
+}
+
+.yellow-zone {
+  background-color: #ffff66;
+}
+
+/* Center */
+.center-home {
+  background-color: #fff;
+  background-image: conic-gradient(
+    red 0deg 90deg,
+    green 90deg 180deg,
+    yellow 180deg 270deg,
+    blue 270deg 360deg
+  );
 }
