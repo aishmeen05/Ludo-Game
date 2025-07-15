@@ -7,27 +7,43 @@ for (let i = 0; i < 225; i++) {
   const row = Math.floor(i / 15);
   const col = i % 15;
 
-  // Top-left Red Zone
+  // Corner Zones
   if (row < 6 && col < 6) {
     block.classList.add('red-zone');
   }
-
-  // Top-right Yellow Zone
   else if (row < 6 && col > 8) {
     block.classList.add('yellow-zone');
   }
-
-  // Bottom-left Blue Zone
   else if (row > 8 && col < 6) {
     block.classList.add('blue-zone');
   }
-
-  // Bottom-right Green Zone
   else if (row > 8 && col > 8) {
     block.classList.add('green-zone');
   }
 
-  // Center HOME area (3x3 block)
+  // Safe Paths
+
+  // Red Safe Path
+  else if ((col === 6 && row < 6) || (row === 6 && col === 7)) {
+    block.classList.add('red-safe');
+  }
+
+  // Yellow Safe Path
+  else if ((row === 6 && col > 8) || (col === 8 && row < 6)) {
+    block.classList.add('yellow-safe');
+  }
+
+  // Blue Safe Path
+  else if ((col === 6 && row > 8) || (row === 8 && col < 6)) {
+    block.classList.add('blue-safe');
+  }
+
+  // Green Safe Path
+  else if ((row === 8 && col > 8) || (col === 8 && row > 8)) {
+    block.classList.add('green-safe');
+  }
+
+  // Center HOME 3x3
   else if (row >= 6 && row <= 8 && col >= 6 && col <= 8) {
     block.classList.add('center-home');
     if (row === 7 && col === 7) {
@@ -35,7 +51,7 @@ for (let i = 0; i < 225; i++) {
     }
   }
 
-  // White Path area
+  // White Path
   else {
     block.classList.add('white-path');
   }
