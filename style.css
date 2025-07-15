@@ -109,3 +109,12 @@ h1 {
   background-color: #e6b800;
   border: 2px solid black;
 }
+
+.star-spot {
+  background-color: white;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}

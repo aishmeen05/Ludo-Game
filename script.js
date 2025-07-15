@@ -57,6 +57,17 @@ for (let i = 0; i < 225; i++) {
     block.classList.add('start-yellow');
   }
 
+  // ⭐️ Safe Stars (Neutral Safe Zones)
+else if (
+    (row === 8 && col === 2) ||
+    (row === 12 && col === 8) ||
+    (row === 6 && col === 12) ||
+    (row === 2 && col === 6)
+  ) {
+    block.classList.add('star-spot');
+    block.innerText = "⭐️";
+}
+
   // White path
   else {
     block.classList.add('white-path');
