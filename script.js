@@ -12,15 +12,19 @@ for (let i = 0; i < 225; i++) {
   else if (row > 8 && col < 6) block.classList.add('blue-zone');
   else if (row > 8 && col > 8) block.classList.add('green-zone');
 
-  // ✅ 3x3 center HOME blocks
+  // Center HOME area (3x3 black)
   else if (row >= 6 && row <= 8 && col >= 6 && col <= 8) {
     block.classList.add('center-home');
-
-    // Show HOME text only on center block (middle of the 3x3 grid)
     if (row === 7 && col === 7) {
       block.innerText = "HOME";
     }
   }
 
+  // White path area blocks
+  else {
+    block.classList.add('white-path');
+  }
+
   grid.appendChild(block);
 }
+
