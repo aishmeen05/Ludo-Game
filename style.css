@@ -63,23 +63,17 @@ h1 {
   background-color: white;
 }
 
-/* Center Triangle */
-.center-triangle {
-  background: conic-gradient(
-    red 0% 25%, 
-    yellow 25% 50%, 
-    green 50% 75%, 
-    blue 75% 100%
-  );
+.center-home {
+  background-color: black;
   color: white;
   font-weight: bold;
+  font-size: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  text-align: center;
 }
-
 /* Remove borders from colored zones and center for clean look */
-.red-zone, .yellow-zone, .green-zone, .blue-zone, .center-triangle {
+.red-zone, .yellow-zone, .green-zone, .blue-zone, .center-home {
   border: none;
 }

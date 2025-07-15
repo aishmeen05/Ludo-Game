@@ -46,7 +46,7 @@ for (let i = 0; i < 225; i++) {
   // Center Triangle (4 colors meet here)
 
   else if (row >= 6 && row <= 8 && col >= 6 && col <= 8) {
-    block.classList.add('center-triangle');
+    block.classList.add('center-home');
 
     // Optional: Add inner text for style
     if (row === 7 && col === 7) {
