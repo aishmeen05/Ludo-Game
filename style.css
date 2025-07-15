@@ -25,23 +25,27 @@ h1 {
   width: 30px;
   height: 30px;
   background-color: white;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc;  /* Default gridline for white area */
 }
 
 .red-zone {
   background-color: #ff4d4d;
+  border: none; 
 }
 
 .green-zone {
   background-color: #4dff88;
+  border: none; 
 }
 
 .blue-zone {
   background-color: #4da6ff;
+  border: none; 
 }
 
 .yellow-zone {
   background-color: #ffff66;
+  border: none; 
 }
 
 .center-home {
@@ -53,6 +57,7 @@ h1 {
   align-items: center;
   justify-content: center;
   text-align: center;
+  border: none; 
 }
 
 
