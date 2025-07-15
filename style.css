@@ -1,75 +1,91 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
   margin: 0;
   padding: 0;
+  background: #f2f2f2;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;   
-  justify-content: center; 
-  height: 100vh;  
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
 }
 
 h1 {
-  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(15, 30px);
   grid-template-rows: repeat(15, 30px);
-  background-color: white;
+  background: white;
 }
 
 .block {
   width: 30px;
   height: 30px;
   box-sizing: border-box;
-  border: 1px solid #ccc;
 }
 
+/* Outer Zones without borders */
+.red-zone,
+.yellow-zone,
+.green-zone,
+.blue-zone {
+  border: none;
+}
+
+/* Colored Zones */
 .red-zone {
-  background-color: #ff4d4d;
+  background: #ff4d4d;
 }
 
 .yellow-zone {
-  background-color: #ffff66;
+  background: #ffff66;
 }
 
 .green-zone {
-  background-color: #66ff66;
+  background: #66ff66;
 }
 
 .blue-zone {
-  background-color: #4da6ff;
+  background: #4da6ff;
 }
 
+/* Safe Zones - light shades */
 .red-safe {
-  background-color: #ff9999;
+  background: #ff9999;
+  border: 1px solid #ccc;
 }
 
 .yellow-safe {
-  background-color: #ffffb3;
+  background: #ffffb3;
+  border: 1px solid #ccc;
 }
 
 .green-safe {
-  background-color: #b3ffb3;
+  background: #b3ffb3;
+  border: 1px solid #ccc;
 }
 
 .blue-safe {
-  background-color: #b3d9ff;
+  background: #b3d9ff;
+  border: 1px solid #ccc;
 }
 
+/* White Path */
 .white-path {
-  background-color: white;
+  background: white;
+  border: 1px solid #ccc;
 }
 
+/* Center HOME */
 .center-home {
-  background-color: black;
-  color: white;
+  background: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
+  color: white;
   font-weight: bold;
+  font-size: 10px;
 }
