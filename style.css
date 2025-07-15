@@ -65,14 +65,12 @@ h1 {
 
 .center-home {
   background-color: black;
-  color: white;
-  font-weight: bold;
-  font-size: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  font-weight: bold;
 }
+
 /* Remove borders from colored zones and center for clean look */
 .red-zone, .yellow-zone, .green-zone, .blue-zone, .center-home {
   border: none;

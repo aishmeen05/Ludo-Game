@@ -23,38 +23,38 @@ for (let i = 0; i < 225; i++) {
 
   // Color Safe Paths
 
-  // Red path (bottom to center)
-  else if (col === 7 && row > 5) {
+  // Red path (bottom to center edge)
+  else if (col === 7 && row > 8) {
     block.classList.add('red-safe');
   }
 
-  // Yellow path (left to center)
-  else if (row === 7 && col < 9) {
+  // Yellow path (left to center edge)
+  else if (row === 7 && col < 6) {
     block.classList.add('yellow-safe');
   }
 
-  // Blue path (right to center)
-  else if (row === 7 && col > 6) {
+  // Blue path (right to center edge)
+  else if (row === 7 && col > 8) {
     block.classList.add('blue-safe');
   }
 
-  // Green path (top to center)
-  else if (col === 7 && row < 9) {
+  // Green path (top to center edge)
+  else if (col === 7 && row < 6) {
     block.classList.add('green-safe');
   }
 
-  // Center Triangle (4 colors meet here)
-
+  // Center Home (3x3 black block)
   else if (row >= 6 && row <= 8 && col >= 6 && col <= 8) {
     block.classList.add('center-home');
 
-    // Optional: Add inner text for style
     if (row === 7 && col === 7) {
-      block.innerText = "★";
+      block.innerText = "HOME";
+      block.style.color = "white";
+      block.style.fontSize = "10px";
     }
   }
 
-  // Rest of the white path
+  // White Path
   else {
     block.classList.add('white-path');
   }
