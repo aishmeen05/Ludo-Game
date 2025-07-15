@@ -30,16 +30,16 @@ for (let i = 0; i < 225; i++) {
   }
 
   // Safe Paths (Corrected)
-  else if (col === 7 && row < 6) {
-    block.classList.add('green-safe');
-  }
-  else if (row === 7 && col > 8) {
+  else if (col === 7 && row < 6 && row > 0) {
     block.classList.add('yellow-safe');
   }
-  else if (col === 7 && row > 8) {
+  else if (row === 7 && col > 8 && col < 14) {
+    block.classList.add('green-safe');
+  }
+  else if (col === 7 && row > 8 && row < 14) {
     block.classList.add('blue-safe');
   }
-  else if (row === 7 && col < 6) {
+  else if (row === 7 && col < 6 && col > 0) {
     block.classList.add('red-safe');
   }
 
