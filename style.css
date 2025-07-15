@@ -18,36 +18,40 @@ h1 {
   display: grid;
   grid-template-columns: repeat(15, 30px);
   grid-template-rows: repeat(15, 30px);
-  gap: 1px;
+  gap: 0; /* No extra gap between blocks */
 }
 
 .block {
   width: 30px;
   height: 30px;
   background-color: white;
-  border: none;
+  border: none;  /* By default sabka border hata diya */
 }
 
+/* Sirf white-path mein border chahiye */
+.white-path {
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+/* Colored Zones */
 .red-zone {
   background-color: #ff4d4d;
-  border: none; 
 }
 
 .green-zone {
   background-color: #4dff88;
-  border: none; 
 }
 
 .blue-zone {
   background-color: #4da6ff;
-  border: none; 
 }
 
 .yellow-zone {
   background-color: #ffff66;
-  border: none; 
 }
 
+/* Center HOME 3x3 block */
 .center-home {
   background-color: black;
   color: white;
@@ -57,14 +61,4 @@ h1 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: none; 
 }
-
-.white-path {
-  background-color: white;
-  border: 1px solid #ccc;
-}
-
-
-
-
