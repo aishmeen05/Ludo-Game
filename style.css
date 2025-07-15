@@ -12,7 +12,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(15, 30px);
   grid-template-rows: repeat(15, 30px);
-  margin: 20px auto;
+  margin: 20px auto;  /* Center horizontally */
   background-color: white;
 }
 
@@ -63,6 +63,7 @@ h1 {
   background-color: white;
 }
 
+/* Center Home */
 .center-home {
   background-color: black;
   display: flex;
@@ -71,7 +72,7 @@ h1 {
   font-weight: bold;
 }
 
-/* Remove borders from colored zones and center for clean look */
+/* Remove borders from colored zones and center */
 .red-zone, .yellow-zone, .green-zone, .blue-zone, .center-home {
   border: none;
 }

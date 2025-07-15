@@ -21,26 +21,38 @@ for (let i = 0; i < 225; i++) {
     block.classList.add('green-zone');
   }
 
-  // Color Safe Paths
+  // Safe Paths (Fixed Colors & White Tips)
 
-  // Red path (bottom to center edge)
-  else if (col === 7 && row > 8) {
-    block.classList.add('red-safe');
-  }
-
-  // Yellow path (left to center edge)
-  else if (row === 7 && col < 6) {
-    block.classList.add('yellow-safe');
-  }
-
-  // Blue path (right to center edge)
-  else if (row === 7 && col > 8) {
+  // Blue safe path (bottom to center)
+  else if (col === 7 && row > 5 && row < 9) {
     block.classList.add('blue-safe');
   }
+  else if (col === 7 && row === 14) {   // bottom tip should be white
+    block.classList.add('white-path');
+  }
 
-  // Green path (top to center edge)
-  else if (col === 7 && row < 6) {
+  // Red safe path (left to center)
+  else if (row === 7 && col > 5 && col < 9) {
+    block.classList.add('red-safe');
+  }
+  else if (row === 7 && col === 14) {   // right tip should be white
+    block.classList.add('white-path');
+  }
+
+  // Green safe path (top to center)
+  else if (col === 7 && row > 0 && row < 6) {
     block.classList.add('green-safe');
+  }
+  else if (col === 7 && row === 0) {   // top tip should be white
+    block.classList.add('white-path');
+  }
+
+  // Yellow safe path (right to center)
+  else if (row === 7 && col > 0 && col < 6) {
+    block.classList.add('yellow-safe');
+  }
+  else if (row === 7 && col === 0) {   // left tip should be white
+    block.classList.add('white-path');
   }
 
   // Center Home (3x3 black block)
