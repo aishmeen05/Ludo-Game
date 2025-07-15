@@ -43,6 +43,20 @@ for (let i = 0; i < 225; i++) {
     block.classList.add('red-safe');
   }
 
+  // Starting Points
+  else if (row === 6 && col === 1) {
+    block.classList.add('start-red');
+  }
+  else if (row === 13 && col === 6) {
+    block.classList.add('start-blue');
+  }
+  else if (row === 8 && col === 13) {
+    block.classList.add('start-green');
+  }
+  else if (row === 1 && col === 8) {
+    block.classList.add('start-yellow');
+  }
+
   // White path
   else {
     block.classList.add('white-path');

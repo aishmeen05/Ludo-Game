@@ -89,3 +89,23 @@ h1 {
   font-weight: bold;
   font-size: 10px;
 }
+
+.start-red {
+  background-color: #cc0000;
+  border: 2px solid black;
+}
+
+.start-blue {
+  background-color: #0059b3;
+  border: 2px solid black;
+}
+
+.start-green {
+  background-color: #009933;
+  border: 2px solid black;
+}
+
+.start-yellow {
+  background-color: #e6b800;
+  border: 2px solid black;
+}
