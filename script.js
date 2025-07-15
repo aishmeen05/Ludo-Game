@@ -21,43 +21,40 @@ for (let i = 0; i < 225; i++) {
     block.classList.add('green-zone');
   }
 
-  // Center HOME 3x3 (check first)
+  // Color Safe Paths
+
+  // Red path (bottom to center)
+  else if (col === 7 && row > 5) {
+    block.classList.add('red-safe');
+  }
+
+  // Yellow path (left to center)
+  else if (row === 7 && col < 9) {
+    block.classList.add('yellow-safe');
+  }
+
+  // Blue path (right to center)
+  else if (row === 7 && col > 6) {
+    block.classList.add('blue-safe');
+  }
+
+  // Green path (top to center)
+  else if (col === 7 && row < 9) {
+    block.classList.add('green-safe');
+  }
+
+  // Center Triangle (4 colors meet here)
+
   else if (row >= 6 && row <= 8 && col >= 6 && col <= 8) {
-    block.classList.add('center-home');
+    block.classList.add('center-triangle');
+
+    // Optional: Add inner text for style
     if (row === 7 && col === 7) {
-      block.innerText = "HOME";
+      block.innerText = "★";
     }
   }
 
-  // Safe Paths around the board (outer path loop)
-
-  // Horizontal path
-  else if (row === 6 || row === 8) {
-    if (col > 5 && col < 9) {
-      block.classList.add('white-path');
-    }
-    else if (col < 6) {
-      block.classList.add('blue-safe');
-    }
-    else if (col > 8) {
-      block.classList.add('green-safe');
-    }
-  }
-
-  // Vertical path
-  else if (col === 6 || col === 8) {
-    if (row > 5 && row < 9) {
-      block.classList.add('white-path');
-    }
-    else if (row < 6) {
-      block.classList.add('red-safe');
-    }
-    else if (row > 8) {
-      block.classList.add('yellow-safe');
-    }
-  }
-
-  // Rest of the white path (inside squares)
+  // Rest of the white path
   else {
     block.classList.add('white-path');
   }

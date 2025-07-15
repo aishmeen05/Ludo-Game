@@ -5,12 +5,6 @@ body {
 }
 
 h1 {
-  color: #333;
-}
-
-.board {
-  display: flex;
-  justify-content: center;
   margin-top: 20px;
 }
 
@@ -18,63 +12,74 @@ h1 {
   display: grid;
   grid-template-columns: repeat(15, 30px);
   grid-template-rows: repeat(15, 30px);
-  gap: 0; /* No extra gap between blocks */
+  margin: 20px auto;
+  background-color: white;
 }
 
 .block {
   width: 30px;
   height: 30px;
-  background-color: white;
-  border: none;  /* By default sabka border hata diya */
-}
-
-/* Sirf white-path mein border chahiye */
-.white-path {
-  background-color: white;
+  box-sizing: border-box;
   border: 1px solid #ccc;
 }
 
-/* Colored Zones */
+/* Corner Zones */
 .red-zone {
   background-color: #ff4d4d;
-}
-
-.green-zone {
-  background-color: #4dff88;
-}
-
-.blue-zone {
-  background-color: #4da6ff;
 }
 
 .yellow-zone {
   background-color: #ffff66;
 }
 
-/* Center HOME 3x3 block */
-.center-home {
-  background-color: black;
-  color: white;
-  font-weight: bold;
-  font-size: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.green-zone {
+  background-color: #66ff66;
 }
+
+.blue-zone {
+  background-color: #4da6ff;
+}
+
+/* Safe Paths */
 
 .red-safe {
   background-color: #ff9999;
 }
 
+.yellow-safe {
+  background-color: #ffffb3;
+}
+
 .green-safe {
-  background-color: #99ffcc;
+  background-color: #b3ffb3;
 }
 
 .blue-safe {
-  background-color: #99ccff;
+  background-color: #b3d9ff;
 }
 
-.yellow-safe {
-  background-color: #ffff99;
+/* White path */
+.white-path {
+  background-color: white;
+}
+
+/* Center Triangle */
+.center-triangle {
+  background: conic-gradient(
+    red 0% 25%, 
+    yellow 25% 50%, 
+    green 50% 75%, 
+    blue 75% 100%
+  );
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Remove borders from colored zones and center for clean look */
+.red-zone, .yellow-zone, .green-zone, .blue-zone, .center-triangle {
+  border: none;
 }
